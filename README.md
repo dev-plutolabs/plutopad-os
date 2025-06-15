@@ -13,7 +13,7 @@ voltage and current draw, and automatically enters deep sleep mode when inactive
 - Microcontroller :  ESP32-WROOM-32E (Bluetooth + WiFi | 3.3V System)
 - GPIO Expander   :  MCP23017 (via I²C)
 - LiPo Monitor    :  INA226
-- LiPo Charger    :  MCP73831 (@ 500mA max)
+- LiPo Charger    :  MCP73831 (@500mA MAX)
 - 3.3V Regulator  :  TPS73733
 ---
 
