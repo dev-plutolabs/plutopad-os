@@ -3,7 +3,7 @@
 **C++ based firmware for the PlutoPAD wireless controller, handling button input, battery charging/monitoring, and Bluetooth Serial communication.**
 
 PlutoPAD-OS is the embedded firmware that powers the PlutoPAD controller, based on a ESP32 microcontroller chip and designed for wireless robotics projects. 
-PlutoPAD-OS Firmware reads the state of 16 buttons using an I²C-connected MCP23017 GPIO expander and transmits input events over Bluetooth using the Serial Port 
+PlutoPAD-OS firmware reads the state of 16 buttons using an I²C-connected MCP23017 GPIO expander and transmits input events over Bluetooth using the Serial Port 
 Profile (SPP) for fast and reliable communication. The firmware integrates real-time battery monitoring via the INA226 sensor, allowing it to track 
 voltage and current draw, and automatically enters deep sleep mode when inactive to preserve battery life during idle periods.
 
@@ -33,7 +33,9 @@ Before building PlutoPAD-OS, make sure the following libraries are installed in 
   [INA226 by Rob Tillaart](https://github.com/RobTillaart/INA226)  
 
 - **esp_sleep**  
-  Built into the ESP32 core; used for controlling deep sleep and power management.  
+  Built into the ESP32 core; used for controlling deep sleep and power management. No separate installation required.  
+
+### Arduino IDE
 
 To install libraries via Arduino IDE:
 
