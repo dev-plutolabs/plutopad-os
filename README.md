@@ -1,6 +1,6 @@
 # PlutoPAD-OS Firmware
 
-**C++ based firmware for the PlutoPAD wireless controller, handling button input, battery monitoring, and bluetooth serial communication.**
+**C++ based firmware for the PlutoPAD wireless controller, handling button input, battery monitoring, and Bluetooth Serial communication.**
 
 PlutoPAD-OS is the embedded firmware that powers the PlutoPAD wireless controller, based on a ESP32 microcontroller chip and designed for robotics projects. 
 Firmware reads the state of 16 buttons using an I²C-connected MCP23017 GPIO expander and transmits input events over Bluetooth using the Serial Port 
