@@ -17,7 +17,6 @@ voltage and current draw, and automatically enters deep sleep mode when inactive
 - 3.3V Regulator  :  TPS73733
 ---
 
----
 ## 📦 Dependencies
 
 Before building PlutoPAD-OS, make sure the following libraries are installed in your IDE or firmware environment:
@@ -49,7 +48,7 @@ For PlatformIO users, add the following to your `platformio.ini`:
 ```ini
 lib_deps =
   adafruit/Adafruit MCP23017 Arduino Library
-  RobTillaart/INA226
+  robtillaart/INA226
 ```
 ---
 
