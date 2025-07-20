@@ -6,7 +6,7 @@
  *   - Microcontroller :  ESP32-WROOM-32E (Bluetooth + WiFi | 3.3V System)
  *   - GPIO Expander   :  MCP23017 (via I2C)
  *   - LiPo Monitor    :  INA226
- *   - LiPo Charger    :  MCP73831 (@ 500mA max)
+ *   - LiPo Charger    :  MCP73831 (@ ~500mA max)
  *   - 3.3V Regulator  :  TPS73733
  * 
  * All [x16] digital button states sent over custom 2-byte <packet> to any Bluetooth client (using PlutoPAD.h)
@@ -17,8 +17,8 @@
  *   - OFF            : No Activity
  *   - PULSE          : Bluetooth Searching...
  *   - SOLID          : Bluetooth Connected!
- *   - FAST BLINK     : Battery Low (between 3.5V and 3.3V)
- *   - FAST-STOP-FAST : Battery Critical (less than 3.3V  CHARGE NOW)
+ *   - FAST BLINK     : Battery Low (between LOW_VOLTAGE and CRITICAL_VOLTAGE)
+ *   - FAST-STOP-FAST : Battery Critical (less than CRITICAL_VOLTAGE   -->  CHARGE NOW!)
  *   - DOUBLE BLINK   : Wired Mode
  *   - TRIPLE BLINK   : Debug Mode
  * 
@@ -29,8 +29,8 @@
  * @author  
  * Peter Kyriakides
  *
- * @version 0.1.0
- * @date    15-06-2025
+ * @version 0.1.1
+ * @date    20-07-2025
  * 
  * @note Subject to the GNU General Public License v3.0 (GPL-3.0).
  */
@@ -51,10 +51,10 @@
 #define ESP_SCL 25
 #define ESP_SDA 26
 
-#define CRITICAL_VOLTAGE 3.3    // Critical battery voltage threshold [V]
-#define LOW_VOLTAGE 3.5         // Low battery voltage threshold [V]
+#define CRITICAL_VOLTAGE 3.2    // Critical battery voltage threshold [V]
+#define LOW_VOLTAGE 3.4         // Low battery voltage threshold [V]
 #define RECOVERY_VOLTAGE 3.7    // Recovery/wake battery voltage threshold [V]
-#define WAKE_INTERVAL 20        // Wake interval from deep sleep battery check [s]
+#define WAKE_INTERVAL 30        // Wake interval from deep sleep battery check [s]
 
 // Define the pin for the Status LED [YELLOW]
 int statusLED = 12;
